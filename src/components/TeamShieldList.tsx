@@ -1,12 +1,6 @@
 import { useState } from 'react';
 import { StyleSheet, FlatList, Image, Pressable, ImageURISource } from 'react-native';
 
-import BorussiaShield from '../../assets/images/borussia.png';
-import ChelseaShield from '../../assets/images/chelsea.png';
-import CityShield from '../../assets/images/city.png';
-import ManchesterUnitedShield from '../../assets/images/machester-united.png';
-import PsgShield from '../../assets/images/psg.png';
-
 type TeamShieldListProps = {
   onSelect: (item: ImageURISource) => void;
   onCloseModal: () => void;
