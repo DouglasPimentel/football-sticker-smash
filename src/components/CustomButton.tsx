@@ -1,17 +1,17 @@
-import { StyleSheet, View, Pressable, Text } from 'react-native';
+import { StyleSheet, View, Pressable, Text, GestureResponderEvent } from 'react-native';
 import { theme } from '../theme';
 
 type CustomButtonProps = {
   primary?: boolean;
   label: string;
-  onPress: () => void;
+  onPress: (event: GestureResponderEvent) => void;
 };
 
 const CustomButton = ({ primary, label, onPress }: CustomButtonProps) => {
   return (
     <View style={styles.buttonContainer}>
-       <Pressable style={primary ? styles.button : styles.buttonSecondary} onPress={onPress}>
-          <Text style={primary ? styles.buttonLabel : styles.buttonSecondaryLabel}>{label}</Text>
+       <Pressable style={[styles.button, primary ? styles.button : styles.buttonSecondary]} onPress={onPress}>
+          <Text style={[styles.buttonLabel, primary ? styles.buttonLabel : styles.buttonSecondaryLabel]}>{label}</Text>
         </Pressable>
     </View>
   );
@@ -40,22 +40,17 @@ const styles = StyleSheet.create({
     color: theme.colors.balticSea,
     fontWeight: '700',
   },
-  buttonSecondary: {
-    width: '100%',
-    height: '100%',
-    backgroundColor: theme.colors.balticSea,
-    borderRadius: 50,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+  buttonPrimary: {
+    backgroundColor: theme.colors.algaeGreen,
   },
-  buttonSecondaryIcon: {
-    paddingRight: 8,
+  buttonPrimaryLabel: {
+    color: theme.colors.balticSea,
+  },
+  buttonSecondary: {
+    backgroundColor: theme.colors.balticSea,
   },
   buttonSecondaryLabel: {
-    fontSize: 18,
     color: theme.colors.desertStorm,
-    fontWeight: '700',
   },
 });
 
