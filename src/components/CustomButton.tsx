@@ -1,4 +1,4 @@
-import { StyleSheet, View, Pressable, Text, GestureResponderEvent } from 'react-native';
+import { StyleSheet, View, Pressable, Text } from 'react-native';
 import { theme } from '../theme';
 
 type CustomButtonProps = {

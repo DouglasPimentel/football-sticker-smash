@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { StyleSheet, View, Text, ImageURISource } from 'react-native';
+import { StyleSheet, View, ImageURISource } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import * as ImagePicker from 'expo-image-picker';
 import * as MediaLibrary from 'expo-media-library';

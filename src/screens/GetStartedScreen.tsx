@@ -1,5 +1,5 @@
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { StyleSheet, Text, SafeAreaView, View, Image, ImageSourcePropType } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, Image } from 'react-native';
 import { RootStackParamList } from '../navigation/RootStackParamList';
 import { theme } from '../theme';
 
