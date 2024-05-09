@@ -10,15 +10,9 @@ type CustomButtonProps = {
 const CustomButton = ({ primary, label, onPress }: CustomButtonProps) => {
   return (
     <View style={styles.buttonContainer}>
-      {primary ? (
-        <Pressable style={styles.button} onPress={onPress}>
-          <Text style={styles.buttonLabel}>{label}</Text>
+       <Pressable style={primary ? styles.button : styles.buttonSecondary} onPress={onPress}>
+          <Text style={primary ? styles.buttonLabel : styles.buttonSecondaryLabel}>{label}</Text>
         </Pressable>
-      ) : (
-        <Pressable style={styles.buttonSecondary} onPress={onPress}>
-          <Text style={styles.buttonSecondaryLabel}>{label}</Text>
-        </Pressable>
-      )}
     </View>
   );
 };

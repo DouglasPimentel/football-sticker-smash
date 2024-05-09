@@ -90,11 +90,12 @@ const MainScreen = ({ navigation }: MainScreenProps) => {
       ) : (
         <View style={styles.footerContainer}>
           <CustomButton
-            primary
+            primary={true}
             label="Escolha uma foto"
             onPress={pickerImageAsync}
           />
            <CustomButton
+            primary={false}
             label="Usar esta foto"
             onPress={() => setShowAppOptions(true)}
           />
